@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import React, { useState } from "react";
 import Container from "../Global/Container";
 import ProjectCard from "../Projects/ProjectCard";
 import LiveDrinkImg from "../../images/livedrink.jpg";
@@ -8,7 +7,7 @@ import CreativeAgency from "../../images/creativeAgency.jpg";
 
 const Projects = () => (
   <div css={styles}>
-    <h3>My Projects</h3>
+    <h3>Projects</h3>
     <Container>
       <div className="projectWrapper">
         <ProjectCard img={LiveDrinkImg} cardTitle="Live Drink Website" cardDesc="Replicate template and add cart functionality. Learned how to implement and use tailwindCSS" techUsed="HTML5, TailwindCSS, Javascript" />
@@ -22,7 +21,7 @@ const Projects = () => (
 const styles = css`
   width: 100%;
   padding: 100px 0;
-  background: rgba(0,0,0,0.8);
+  background: #1b242f;
   color: #000;
   h3 {
     text-align: center;

@@ -7,9 +7,9 @@ const Navbar = () => (
   <nav css={styles}>
     <Container>
       <div className="navIcon">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
       </div>
     </Container>
   </nav>
@@ -30,7 +30,7 @@ const styles = css`
       .bar3 {
         width: 24px;
         height: 3px;
-        background-color: #000;
+        background-color: #fff;
         margin: 6px 0;
         transition: 0.4s;
       }

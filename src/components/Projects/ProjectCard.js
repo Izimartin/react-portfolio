@@ -2,7 +2,7 @@
 import { css, jsx } from "@emotion/core";
 
 const ProjectCard = ({ img, cardTitle, cardDesc, techUsed }) => (
-  <div clasName="projects" css={styles}>
+  <div className="projects" css={styles}>
     <img src={img} />
     <div className="imgInfo">
       <h3>{cardTitle}</h3>
@@ -20,7 +20,7 @@ const ProjectCard = ({ img, cardTitle, cardDesc, techUsed }) => (
 
 const styles = css`
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   background: #fff;
   border-radius: 10px;
   img {
