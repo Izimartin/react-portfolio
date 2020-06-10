@@ -12,26 +12,29 @@ import reactIcon from "../../images/reactIcon.png";
 import githubIcon from "../../images/githubIcon.svg";
 import vscodeIcon from "../../images/vscodeIcon.svg";
 
-
 const About = () => {
   return (
-    <section className="about" css={styles}>
+    <section className="about" id="about" css={styles}>
       <h2>About Me</h2>
       <Container>
         <div className="aboutMe">
-          <p>I'm a 23 year-old front-end Web Developer from Dubuque, Iowa. I have a passion for creating fast loading, dynamic, and responsive websites using the latest technologies available.</p>
+          <p>
+            I'm a 23 year-old front-end Web Developer from Dubuque, Iowa. I have
+            a passion for creating fast loading, dynamic, and responsive
+            websites using the latest technologies available.
+          </p>
         </div>
         <div className="techTools">
           <h3>Technologies & Tools that I use</h3>
           <div className="wrapper">
-            <TechIcon imgIcon={html5Icon}/>
-            <TechIcon imgIcon={css3Icon}/>
-            <TechIcon imgIcon={sassIcon}/>
-            <TechIcon imgIcon={tailwindIcon}/>
-            <TechIcon imgIcon={jsIcon}/>
-            <TechIcon imgIcon={reactIcon}/>
-            <TechIcon imgIcon={githubIcon}/>
-            <TechIcon imgIcon={vscodeIcon}/>
+            <TechIcon imgIcon={html5Icon} imgAlt="HTML5" />
+            <TechIcon imgIcon={css3Icon} imgAlt="CSS3" />
+            <TechIcon imgIcon={sassIcon} imgAlt="SCSS" />
+            <TechIcon imgIcon={tailwindIcon} imgAlt="Tailwind" />
+            <TechIcon imgIcon={jsIcon} imgAlt="JavaScript" />
+            <TechIcon imgIcon={reactIcon} imgAlt="React JS" />
+            <TechIcon imgIcon={githubIcon} imgAlt="Github" />
+            <TechIcon imgIcon={vscodeIcon} imgAlt="Visual Studio Code" />
           </div>
         </div>
       </Container>
@@ -55,7 +58,7 @@ const styles = css`
       text-align: center;
       p {
         font-size: 1.3rem;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
     .techTools {
@@ -71,6 +74,24 @@ const styles = css`
         align-items: center;
         margin: 0 auto;
         padding: 40px 0 0 0;
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    .container {
+      .aboutMe {
+        max-width: 600px;
+        p {
+          font-size: 1.2rem;
+          text-align: left;
+        }
+      }
+      .techTools {
+        margin: 0 auto;
+        .wrapper {
+          max-width: 600px;
+          flex-wrap: wrap;
+        }
       }
     }
   }

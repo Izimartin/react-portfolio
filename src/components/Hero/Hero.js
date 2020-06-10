@@ -10,7 +10,7 @@ const Hero = () => (
     <Container>
       <div className="heroContent">
         <div className="heroHeading">
-          <h2>Welcome, </h2>
+          <h2>Hello there, </h2>
           <h2>I'm Eric Holdridge.</h2>
           <Typist>
             <p>A front-end web developer.</p>
@@ -52,7 +52,6 @@ const styles = css`
     }
     p {
       color: #fff;
-      padding: 20px 0 18px 0;
       opacity: 0.7;
       font-size: 1.3rem;
     }
@@ -62,7 +61,7 @@ const styles = css`
         border: 1px solid #fff;
         color: #fff;
         padding: 12px 20px;
-        margin-right: 20px;
+        margin: 20px 20px 0 0;
         border-radius: 4px;
         text-transform: uppercase;
         cursor: pointer;

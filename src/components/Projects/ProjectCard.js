@@ -1,18 +1,26 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-const ProjectCard = ({ img, cardTitle, cardDesc, techUsed }) => (
+const ProjectCard = ({ img, cardTitle, cardDesc, techUsed, projectLink, codeLink }) => (
   <div className="projects" css={styles}>
     <img src={img} />
     <div className="imgInfo">
       <h3>{cardTitle}</h3>
-      <p><strong>Description:</strong> {cardDesc}</p>
+      <p>
+        <strong>Description:</strong> {cardDesc}
+      </p>
       <div className="techUsed">
-        <span><strong>Tech Used:</strong> {techUsed}</span>
+        <span>
+          <strong>Tech Used:</strong> {techUsed}
+        </span>
       </div>
       <div className="viewProjects">
-        <a href="https://ericholdridge.github.io/live-drink-website/">VIEW PROJECT</a>
-        <a href="https://github.com/ericholdridge/live-drink-website">VIEW CODE</a>
+        <a href={projectLink}>
+          VIEW PROJECT
+        </a>
+        <a href={codeLink}>
+          VIEW CODE
+        </a>
       </div>
     </div>
   </div>
@@ -52,9 +60,17 @@ const styles = css`
         margin: 0 10px 0 0;
         font-size: 0.8rem;
         display: inline-block;
+        transition: box-shadow .4s ease-in-out;
+        &:hover {
+          box-shadow: 0 4px 10px -6px black;
+        }
       }
     }
   }
+  @media(max-width: 1240px) {
+    max-width: 46%;
+  }
+
 `;
 
 export default ProjectCard;
