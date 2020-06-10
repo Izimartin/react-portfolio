@@ -57,7 +57,16 @@ const styles = css`
       justify-content: space-between;
     }
   }
-  @media(max-width: 1240px) {
+  @media (max-width: 740px) {
+    .container {
+      .projectWrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  @media (min-width: 741px) and (max-width: 1121px) {
     .container {
       .projectWrapper {
         flex-wrap: wrap;

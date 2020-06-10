@@ -67,8 +67,50 @@ const styles = css`
       }
     }
   }
-  @media(max-width: 1240px) {
-    max-width: 46%;
+  @media (max-width: 740px) {
+    max-width: 470px;
+    &:nth-child(2) {
+      margin: 30px 0;
+    }
+  }
+
+  @media (min-width: 741px) and (max-width: 1121px) {
+    max-width: 48%;
+    &:last-of-type {
+      margin: 30px 0 0 0;
+    }
+    .imgInfo {
+      h3{
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .techUsed {
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1122px) and (max-width: 1575px) {
+    max-width: 32%;
+    .imgInfo {
+      h3{
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (min-width: 741px) and (max-width: 1575px) {
+    .imgInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 244px;
+      min-height: 244px;
+    }
   }
 
 `;
