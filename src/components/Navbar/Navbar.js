@@ -1,25 +1,49 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import React from "react";
 import Container from "../Global/Container";
+import { useState } from "react";
 
-const Navbar = () => (
-  <nav css={styles}>
-    <Container>
-      <div className="navIcon">
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
-        <ul>
-          <li ><a href="#">Home</a></li>
-          <li ><a href="#about">About</a></li>
-          <li ><a href="#projects">Projects</a></li>
-          <li ><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </Container>
-  </nav>
-);
+const Navbar = () => {
+  const navItems = [
+    {
+      name: "Home",
+      href: "#"
+    },
+    {
+      name: "About",
+      href: "#about"
+    },
+    {
+      name: "Projects",
+      href: "#projects"
+    },
+    {
+      name: "Contact",
+      href: "#contact"
+    }
+  ]
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <nav css={styles}>
+      <Container>
+        <div className="navIcon">
+          <div className="navBar" isMenuOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div>
+          <ul className={isMenuOpen ? "showNavItems" : "hideNavItems"}>
+            {
+            navItems.map(item => (
+            <li><a href={item.href}>{item.name}</a></li>
+            ))}
+          </ul>
+        </div>
+      </Container>
+    </nav>
+  )
+};
 
 const styles = css`
   width: 100%;
@@ -58,13 +82,25 @@ const styles = css`
   @media (max-width: 996px) {
     .container {
       .navIcon {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
         .bar1, 
         .bar2,
         .bar3 {
           display: block;
         }
-        ul {
+        /* ul {
           display: none;
+        } */
+        .hideNavItems {
+          display: none;
+        }
+        .showNavItems {
+          display: flex;
+          width: 100%;
+          justify-content: center;
         }
       }
     }
