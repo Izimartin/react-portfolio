@@ -7,19 +7,16 @@ const Contact = () => {
     <div className="contact" id="contact" css={styles}>
       <h2>Contact</h2>
       <Container>
-        <form method="POST" name="contact" netlify data-netlify="true">
+        <form method="POST" name="contact" data-netlify="true">
           <label>Name:</label>
           <input type="text" name="name" placeholder="Name" />
           <label>Email:</label>
           <input type="email" name="email" placeholder="Email" />
           <label>Message:</label>
-          <textarea rows="8" cols="50" name="comment" form="usrform"></textarea>
+          <textarea rows="8" cols="50" name="message"></textarea>
           <input type="submit" class="sendMessage" value="Send message" />
         </form>
         <p>You can also email me at <span>eholdridge2@gmail.com</span></p>
-        <div className="social">
-
-        </div>
       </Container>
     </div>
   );
