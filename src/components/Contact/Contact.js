@@ -7,11 +7,11 @@ const Contact = () => {
     <div className="contact" id="contact" css={styles}>
       <h2>Contact</h2>
       <Container>
-        <form action="" data-netlify="true">
+        <form action="POST" name="contact" data-netlify="true">
           <label>Name:</label>
-          <input type="text" placeholder="Name" />
+          <input type="text" name="name" placeholder="Name" />
           <label>Email:</label>
-          <input type="text" placeholder="Email" />
+          <input type="email" name="email" placeholder="Email" />
           <label>Message:</label>
           <textarea rows="8" cols="50" name="comment" form="usrform"></textarea>
           <input type="submit" class="sendMessage" value="Send message" />
