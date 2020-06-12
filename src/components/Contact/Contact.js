@@ -7,7 +7,7 @@ const Contact = () => {
     <div className="contact" id="contact" css={styles}>
       <h2>Contact</h2>
       <Container>
-        <form action="POST" name="contact" netlify data-netlify="true">
+        <form method="POST" name="contact" netlify data-netlify="true">
           <label>Name:</label>
           <input type="text" name="name" placeholder="Name" />
           <label>Email:</label>
