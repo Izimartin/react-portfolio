@@ -7,44 +7,15 @@ const Contact = () => {
     <div className="contact" id="contact" css={styles}>
       <h2>Contact</h2>
       <Container>
-        {/* <form method="POST" name="contact" data-netlify="true">
+        <form name="contact" method="post" action="/contact">
+          <input type="hidden" name="form-name" value="contact" />
           <label>Name:</label>
           <input type="text" name="name" placeholder="Name" />
           <label>Email:</label>
           <input type="email" name="email" placeholder="Email" />
           <label>Message:</label>
-          <textarea rows="8" cols="50" name="message"></textarea>
-          <input type="submit" class="sendMessage" value="Send message" />
-        </form>
-        <p>You can also email me at <span>eholdridge2@gmail.com</span></p> */}
-        <form
-        // onSubmit={handleSubmit}
-        name="contact"
-        method="post"
-        action="/contact"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <input
-          // value={name}
-          // onChange={(e) => setName(e.target.value)}
-          type="text"
-          name="name"
-          placeholder="Name"
-        />
-        <input
-          // value={email}
-          // onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          name="email"
-          placeholder="Email"
-        />
-        <textarea
-          // value={message}
-          // onChange={(e) => setMessage(e.target.value)}
-          name="message"
-          placeholder="I have an idea for a project..."
-        ></textarea>
-        <button type="submit">SEND MESSAGE</button>
+          <textarea name="message" rows="8" cols="50" placeholder="Send message..."></textarea>
+          <input type="submit" value="Send Message"/>
       </form>
       </Container>
     </div>
@@ -97,8 +68,14 @@ const styles = css`
     }
     textarea {
       border: 1px solid #ccc;
+      padding: 10px 0 0 10px;
+      border-radius: 4px;
+      font-
       &:focus {
         outline: 1px solid black;
+      }
+      &:placeholder {
+        font-size: 2rem;
       }
     }
   }
