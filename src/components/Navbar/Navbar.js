@@ -91,16 +91,16 @@ const styles = css`
         .bar3 {
           display: block;
         }
-        /* ul {
+        ul {
           display: none;
-        } */
+        }
         .hideNavItems {
           display: none;
         }
         .showNavItems {
           display: flex;
           width: 100%;
-          justify-content: center;
+          justify-content: start;
         }
       }
     }

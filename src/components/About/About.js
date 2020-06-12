@@ -77,12 +77,36 @@ const styles = css`
       }
     }
   }
-  @media (max-width: 750px) {
+
+  @media (min-width: 400px) and (max-width: 750px) {
     .container {
+      padding: 30px 0 0 0;
       .aboutMe {
         max-width: 600px;
         p {
           font-size: 1.2rem;
+          text-align: left;
+        }
+      }
+      .techTools {
+        margin: 0 auto;
+        .wrapper {
+          max-width: 600px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 359px) {
+    h2 {
+      font-size: 2rem;
+    }
+    .container {
+      .aboutMe {
+        max-width: 600px;
+        p {
+          font-size: 1rem;
           text-align: left;
         }
       }

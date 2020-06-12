@@ -17,12 +17,12 @@ const Hero = () => (
             <Typist.Backspace count={26} delay={800} />
             <p>I love creating website's in React.</p>
             <Typist.Backspace count={35} delay={800} />
-            <p>Let's make something cool together!</p>
+            <p>Let's create something cool together!</p>
           </Typist>
         </div>
         <div className="heroButtons">
-          <button>Explore Projects</button>
-          <button>Contact Me</button>
+          <a href="#projects">Explore Projects</a>
+          <a href="#contact">Contact Me</a>
         </div>
       </div>
     </Container>
@@ -56,7 +56,8 @@ const styles = css`
       font-size: 1.3rem;
     }
     .heroButtons {
-      button {
+      a {
+        text-decoration: none;
         background: transparent;
         border: 1px solid #fff;
         color: #fff;
@@ -64,11 +65,75 @@ const styles = css`
         margin: 20px 20px 0 0;
         border-radius: 4px;
         text-transform: uppercase;
+        display: inline-block;
         cursor: pointer;
         outline: none;
         transition: box-shadow 0.4s ease-in-out;
         &:hover {
           box-shadow: 0 8px 16px -6px black;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 360px) and (max-width: 510px) {
+    min-height: 65vh;
+      .container {
+      .heroContent {
+        .heroHeading {
+          color: #fff;
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+          .Typist {
+            display: flex;
+            align-items: center;
+            padding:  10px 0 0 0;
+            p{
+              font-size: 1rem;
+            }
+          }
+        }
+        .heroButtons {
+          a {
+            padding: 10px 12px;
+            font-size: .8rem;
+            margin: 10px 6px 0 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 359px) {
+    .container {
+      .heroContent {
+        .heroHeading {
+          color: #fff;
+          font-size: 1.2rem;
+          line-height: 2rem;
+          .Typist {
+            display: flex;
+            align-items: center;
+            padding:  10px 0 0 0;
+            p{
+              font-size: .9rem;
+            }
+          }
+        }
+        .heroButtons {
+          padding: 10px 0 0 0;
+          display: inline-flex;
+          flex-direction: column;
+          a {
+            text-transform: capitalize;
+            padding: 0;
+            text-align: center;
+            padding: 6px 12px;
+            margin: 0;
+            font-size: .8rem;
+            &:nth-child(2) {
+              margin: 10px 0 0 0;
+            }
+          }
         }
       }
     }

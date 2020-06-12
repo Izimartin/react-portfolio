@@ -14,7 +14,7 @@ const Contact = () => {
           <input type="text" placeholder="Email" />
           <label>Message:</label>
           <textarea rows="8" cols="50" name="comment" form="usrform"></textarea>
-          <input type="submit" class="sendMessage" value="Send message"/>
+          <input type="submit" class="sendMessage" value="Send message" />
         </form>
         <p>You can also email me at <span>eholdridge2@gmail.com</span></p>
         <div className="social">
@@ -80,6 +80,22 @@ const styles = css`
     text-align: center;
     padding: 20px 0 0 0;
     opacity: .5;
+  }
+  @media(max-width: 950px) {
+    form {
+      input {
+        &:nth-last-of-type(1) {
+          width: 100%;
+          max-width: 125px;
+          font-size: .8rem;
+          padding: 0;
+          font-size: .8rem;
+        }
+      }
+    }
+    p {
+      font-size: .9rem;
+    }
   }
 `;
 
