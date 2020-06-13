@@ -3,7 +3,7 @@ import { css, jsx } from "@emotion/core";
 import Container from "../Global/Container";
 import ProjectCard from "../Projects/ProjectCard";
 import LiveDrinkImg from "../../images/livedrink.jpg";
-import CreativeAgency from "../../images/creativeAgency.jpg";
+import Maxitecture from "../../images/maxitecture.jpg";
 import Project2 from "../../images/project2.jpg";
 
 const Projects = () => (
@@ -20,12 +20,12 @@ const Projects = () => (
           codeLink="https://github.com/ericholdridge/live-drink-website"
         />
         <ProjectCard
-          img={CreativeAgency}
-          cardTitle="Creative Agency Website"
-          cardDesc="Replicate template and learn responsiveness"
+          img={Maxitecture}
+          cardTitle="Maxitecture Design Website"
+          cardDesc="Replicate template using HTML5 and SCSS"
           techUsed="HTML5, SCSS"
-          projectLink="https://ericholdridge.github.io/live-drink-website/"
-          codeLink="https://github.com/ericholdridge/live-drink-website"
+          projectLink="https://ericholdridge.github.io/PracticeProject5/"
+          codeLink="https://github.com/ericholdridge/PracticeProject5"
         />
         <ProjectCard
           img={Project2}
