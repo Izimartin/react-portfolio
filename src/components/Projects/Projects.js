@@ -1,10 +1,12 @@
 /** @jsx jsx */
+
 import { css, jsx } from "@emotion/core";
+
 import Container from "../Global/Container";
+import EDVTN from "../../images/Edvtn.png";
+import Maxitecture from "../../images/Favicon generator.png";
+import Project2 from "../../images/Martins Akhivbareme.png";
 import ProjectCard from "../Projects/ProjectCard";
-import LiveDrinkImg from "../../images/livedrink.jpg";
-import Maxitecture from "../../images/maxitecture.jpg";
-import Project2 from "../../images/project2.jpg";
 
 const Projects = () => (
   <div css={styles} id="projects">
@@ -12,28 +14,28 @@ const Projects = () => (
     <Container>
       <div className="projectWrapper">
         <ProjectCard
-          img={LiveDrinkImg}
-          cardTitle="Live Drink Website"
-          cardDesc="Replicate template and add cart functionality. Learned how to implement and use tailwindCSS"
-          techUsed="HTML5, TailwindCSS, JavaScript"
-          projectLink="https://ericholdridge.github.io/live-drink-website/"
-          codeLink="https://github.com/ericholdridge/live-drink-website"
+          img={EDVTN}
+          cardTitle="Voting App"
+          cardDesc="A website for Voting. Learned DOM Javascript from EdwardSpeak"
+          techUsed="HTML5, SCSS, JavaScript"
+          projectLink="https://esvotingapp.netlify.app/"
+          codeLink="https://github.com/Izimartin/Edward-Speak"
         />
         <ProjectCard
           img={Maxitecture}
-          cardTitle="Maxitecture Design Website"
-          cardDesc="Replicate template using HTML5 and SCSS"
-          techUsed="HTML5, SCSS"
-          projectLink="https://ericholdridge.github.io/PracticeProject5/"
-          codeLink="https://github.com/ericholdridge/PracticeProject5"
+          cardTitle="Favicon Generator Website"
+          cardDesc="Replicate template using HTML5, SCSS, Python and Javascript"
+          techUsed="HTML5, SCSS, JavaScript, Python"
+          projectLink="https://favicon61.netlify.app/"
+          codeLink="https://github.com/zuri-training/Favicon-Gen-Team-61"
         />
         <ProjectCard
           img={Project2}
-          cardTitle="Boomerang Template Website"
+          cardTitle="Personal Portfolio Website"
           cardDesc="Replicate template and learn responsiveness"
-          techUsed="HTML5, SCSS"
-          projectLink="https://ericholdridge.github.io/PracticeProject4/"
-          codeLink="https://github.com/ericholdridge/PracticeProject4"
+          techUsed="HTML5, CSS, JavaScript"
+          projectLink="https://martinsakhivbareme.netlify.app/"
+          codeLink="https://github.com/Izimartin/Personal-Portfolio"
         />
       </div>
     </Container>
