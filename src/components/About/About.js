@@ -1,16 +1,28 @@
 /** @jsx jsx */
+
 import { css, jsx } from "@emotion/core";
+
 import Container from "../Global/Container";
 import TechIcon from "./TechIcon";
-// Images
-import html5Icon from "../../images/html5icon.svg";
 import css3Icon from "../../images/css3icon.svg";
-import sassIcon from "../../images/sassIcon.svg";
-import tailwindIcon from "../../images/tailwindIcon.svg";
+import githubIcon from "../../images/githubIcon.svg";
+import html5Icon from "../../images/html5icon.svg";
 import jsIcon from "../../images/jsIcon.svg";
 import reactIcon from "../../images/reactIcon.png";
-import githubIcon from "../../images/githubIcon.svg";
+import sassIcon from "../../images/sassIcon.svg";
+import tailwindIcon from "../../images/tailwindIcon.svg";
 import vscodeIcon from "../../images/vscodeIcon.svg";
+import wordpressIcon from "../../images/OIP.png";
+
+// Images
+
+
+
+
+
+
+
+
 
 const About = () => {
   return (
@@ -19,8 +31,7 @@ const About = () => {
       <Container>
         <div className="aboutMe">
           <p>
-            I'm a 23 year-old front-end Web Developer from Dubuque, Iowa. I have
-            a passion for creating fast loading, dynamic, and responsive
+            I'm a graudte of Computer Science from the Nigerian Institute of Leather and Science Technology and a front-end Web Developer from Nigeria. I have a passion for creating fast loading, dynamic, and responsive
             websites using the latest technologies available.
           </p>
         </div>
@@ -35,6 +46,8 @@ const About = () => {
             <TechIcon imgIcon={reactIcon} imgAlt="React JS" />
             <TechIcon imgIcon={githubIcon} imgAlt="Github" />
             <TechIcon imgIcon={vscodeIcon} imgAlt="Visual Studio Code" />
+            <TechIcon imgIcon={wordpressIcon} imgAlt="WordPress" />
+           
           </div>
         </div>
       </Container>
