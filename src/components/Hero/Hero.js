@@ -1,8 +1,11 @@
 /** @jsx jsx */
+
 import { css, jsx } from "@emotion/core";
-import Typist from "react-typist";
-import Navbar from "../Navbar/Navbar";
+
 import Container from "../Global/Container";
+import Martins from "../../images/Martins.png"
+import Navbar from "../Navbar/Navbar";
+import Typist from "react-typist";
 
 const Hero = () => (
   <section className="hero" css={styles}>
@@ -10,20 +13,26 @@ const Hero = () => (
     <Container>
       <div className="heroContent">
         <div className="heroHeading">
+           <div>
+            < img src ={Martins} alt ="porfile image"style={{ display: "flex", float: 'right'}} />
+            </div>
           <h2>Hello there, </h2>
-          <h2>I'm Eric Holdridge.</h2>
+          <h2>I'm Martins Akhivbareme.</h2>
           <Typist>
-            <p>A front-end web developer.</p>
+            <p>A front-End Web Developer.</p>
             <Typist.Backspace count={26} delay={800} />
             <p>I love creating website's in React.</p>
             <Typist.Backspace count={35} delay={800} />
             <p>Let's create something cool together!</p>
           </Typist>
         </div>
+
         <div className="heroButtons">
           <a href="#projects">Explore Projects</a>
           <a href="#contact">Contact Me</a>
         </div>
+        
+         
       </div>
     </Container>
   </section>
@@ -41,12 +50,15 @@ const styles = css`
   .container {
     .heroContent {
       .heroHeading {
+        margin-top:150px;
+        postion: relative;
         color: #fff;
         font-size: 2rem;
         line-height: 3.6rem;
         .Typist {
           display: flex;
           align-items: center;
+         
         }
       }
     }
@@ -73,6 +85,8 @@ const styles = css`
           box-shadow: 0 8px 16px -6px black;
         }
       }
+    }    
+      
     }
   }
 
